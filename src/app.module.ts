@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 import { StudentsModule } from './students/students.module';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { LogModule } from './log/log.module';
 
 @Global()
 @Module({
@@ -20,6 +21,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       entities: [__dirname + '/../**/entities/*.js'],
     }),
     StudentsModule,
+    LogModule,
   ],
   controllers: [AppController],
   providers: [AppService],
